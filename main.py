@@ -30,11 +30,38 @@ num_user = int(num_user) + int(num_user1) + int(num_user2)
 print(num_user)
 
 #4
-num_user_find = input("Введите целое положительное число ")
+num_user_find = input("Введите целые положительные числа ")
 count = 0
 result = 0
 while count < len(num_user_find):
       if  result < int(num_user_find[count]):
              result = int(num_user_find[count])
       count = count + 1
-print(result)
+print(f"Наибольшее число {result}")
+
+#5
+
+Q = int(input("Введите выручку "))
+C = int(input("Введите издержки "))
+if Q > C:
+    profitability = Q-C
+    Rent = profitability/Q
+    print(f"Вы имеете {profitability} прибыли")
+    worker = int(input("Сколько у вас сотрудников "))
+    print(f"{profitability/worker} профит на одного сотрудника.")
+elif Q == C:
+    print("Не плоха")
+else:
+    print("Вы не рентабельны")
+
+#6
+a = float(input("Введите результат в первый день "))
+b = float(input("Введите резултат которого нужно достич "))
+day = 1
+if a > b:
+    print(day)
+while a < b:
+    a = a + a/10
+    day += 1
+    print(f" {day} день: {a}")
+print(f"на {day} день спортсмен достиг результата — не менее {b} км.")
